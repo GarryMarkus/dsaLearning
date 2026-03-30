@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main(){
     int n;
     cin >> n;
@@ -13,8 +12,15 @@ int main(){
     }
 
     int s = new_set.size();
-    for(const auto& element : new_set){
+
+    vector<int> sorted_vec(new_set.begin(), new_set.end());
+    sort(sorted_vec.begin(), sorted_vec.end());
+
+    int element;
+    for(int i = 0; i<s; i++){
+        element = sorted_vec[i];
         cout << element << " ";
     }
+
     cout << endl << s;
 }
