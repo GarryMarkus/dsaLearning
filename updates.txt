@@ -1,3 +1,0 @@
-Question Status:
-
-Lecture Status: Lecture 25: Pointers in C++ || Part-1 || DSA Placement Course - Love Babbar
