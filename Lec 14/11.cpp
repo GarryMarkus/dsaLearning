@@ -22,7 +22,7 @@ int maxArea(vector<int>& height) {
         base = right-left;
         current = base*min(height[left], height[right]);
         maximum = max(current, maximum);
-
+ 
         height[left] < height[right] ? left++ : right--;
     }
 

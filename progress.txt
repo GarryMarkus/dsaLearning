@@ -1,0 +1,7 @@
+1. C++ (basics, loops, conditions, functions, patterns)
+2. Arrays
+3. STL in C++ (Vectors, Pairs, Sets)
+4. Time and Space Complexity
+5. Binary and Decimal Number System and its conversion
+6. Pointers
+
