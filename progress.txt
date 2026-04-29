@@ -4,4 +4,5 @@
 4. Time and Space Complexity
 5. Binary and Decimal Number System and its conversion
 6. Pointers
+7. Binary Search
 
