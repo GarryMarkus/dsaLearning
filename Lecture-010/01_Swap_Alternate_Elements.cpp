@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void printArray(int arr[], int size) {
@@ -30,7 +30,7 @@ int main() {
     printArray(arr, size);
 
     swapAlternate(arr, size);
-    
+
     cout<<"After swaping alternate elements : ";
     printArray(arr, size);
 

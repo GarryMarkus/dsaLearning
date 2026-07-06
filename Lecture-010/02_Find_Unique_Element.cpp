@@ -1,36 +1,21 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-void printArray(int arr[], int size) {
-    for(int i=0; i<size; i++) {
-        cout<<arr[i]<<" ";
+int findUnique(int *arr, int size)
+{
+    //Write your code here
+    vector<int> vec(arr, arr+size);
+    sort(vec.begin(), vec.end());
+
+    size = vec.size();
+
+    int i = 0;
+    while(i < size){
+        if(vec[i] == vec[i-1] || vec[i] == vec[i+1]){
+            i++;
+        }
+        else{
+            return vec[i];
+        }
     }
-    cout<<endl;
-}
-
-int findUnique(int arr[], int size) {
-    int unique = 0;
-
-    for(int i=0; i<size; i++) {
-        unique = unique ^ arr[i];
-    }
-    
-    return unique;
-}
-
-int main() {
-    int size;
-    int arr[100];
-
-    cout<<"Enter the size of array : ";
-    cin>>size;
-
-    cout<<"Enter the elements of array : ";
-    for(int i=0; i<size; i++) {
-        cin>>arr[i];
-    }
-
-    cout<<"Single unique element present in the array : "<<findUnique(arr, size)<<endl;
-
-    return 0;
 }

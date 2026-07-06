@@ -1,43 +1,22 @@
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h>
 
-void inputArray(int arr[], int size) {
-    for(int i=0; i<size; i++) {
-        cin>>arr[i];
-    }
-}
+vector<vector<int>> pairSum(vector<int> &arr, int s){
+   // Write your code here.
+   sort(arr.begin(), arr.end());
+   int n = arr.size();
+   vector<vector<int>> answer;
 
-void printArray(int arr[], int size) {
-    for(int i=0; i<size; i++) {
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-}
+   for(int i = 0; i < n; i++){
+       for(int j = i+1; j< n; j++){
+           if(arr[i]+arr[j] == s){
+               vector<int> temp;
+               temp.push_back(min(arr[i], arr[j]));
+               temp.push_back(max(arr[i], arr[j]));
 
-void pairSum(int arr[], int size, int sum) {
-    for(int i=0; i<size-1; i++) {
-        for(int j=i+1; j<size; j++) {
-            if(arr[i] + arr[j] == sum) {
-                cout<<"New pair : "<<arr[i]<<" & "<<arr[j]<<endl;
-            }
-        }
-    }
-}
+               answer.push_back(temp);
+           }
+       }
+   }
 
-int main() {
-    int size, targetSum;
-    int arr[100];
-
-    cout<<"Enter the size of array : ";
-    cin>>size;
-
-    cout<<"Enter the elements of array : ";
-    inputArray(arr, size);
-
-    cout<<"Enter the target sum : ";
-    cin>>targetSum;
-
-    pairSum(arr, size, targetSum);
-
-    return 0;
+   return answer;
 }

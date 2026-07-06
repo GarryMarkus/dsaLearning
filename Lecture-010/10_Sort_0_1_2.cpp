@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void inputArray(int arr[], int size) {
@@ -14,16 +14,13 @@ void printArray(int arr[], int size) {
     cout<<endl;
 }
 
-// DNF (Dutch-National-Flag) Algorithm
-// Red - White - Blue Ball Questions
-// low - mid - high variables (3 pointers)
 void sort012(int arr[], int size) {
     int low = 0;
     int mid = 0;
     int high = size-1;
 
     while(mid <= high) {
- 
+
         switch(arr[mid]) {
             case 0:
                 swap(arr[mid++], arr[low++]);
@@ -35,7 +32,7 @@ void sort012(int arr[], int size) {
                 swap(arr[mid], arr[high--]);
                 break;
         }
-        
+
     }
 }
 
